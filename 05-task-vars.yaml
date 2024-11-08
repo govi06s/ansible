@@ -10,8 +10,12 @@
       msg: "Hi, I am learning {{COURSE}}, duration is {{DURATION}}, trainer is {{TRAINER}}"
 
 
-  - name: print the information
-    vars:
+  - name: print the information again
+    vars: #task level variable
       COURSE: "Ansible"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}, duration is {{DURATION}}, trainer is {{TRAINER}}"
+
+    - name: print the information again and again
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{COURSE}}, duration is {{DURATION}}, trainer is {{TRAINER}}"
