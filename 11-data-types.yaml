@@ -1,5 +1,6 @@
 - name: devops course information
   hosts: local
+  connecton: local
   vars:
     course: devops
     duration: 120HRS #number
