@@ -9,4 +9,4 @@
 
   - name: print the user info
     ansible.builtin.debug:
-      mas: " user info: {{ USER }}"
+      msg: " user info: {{ USER }}"
