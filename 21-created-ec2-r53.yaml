@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-    vpc_subnet_id: subnet-01fbf6e1855134a9b
-    sg_id: sg-0a714463406c3c662
-    amd_id: ami-09c813fb71547fc4f
+    vpc_subnet_id: "subnet-01fbf6e1855134a9b"
+    sg_id: "sg-0a714463406c3c662"
+    amd_id: "ami-09c813fb71547fc4f"
     instances:
     - mysql
     - frontend
