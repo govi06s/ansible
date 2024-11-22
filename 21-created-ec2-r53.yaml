@@ -6,9 +6,9 @@
     sg_id: "sg-0a714463406c3c662"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
-    - mysql
     - frontend
     - backend
+    - mysql
 
   tasks:
   - name: create ec2 instance
