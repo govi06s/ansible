@@ -11,6 +11,14 @@
     - backend
 
   tasks:
+  - name: create ec2 instance
+    amazon.aws.ec2_instance:
+      name: "{{ subnet_id }}"
+      instance_type: "t2.micro"
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
+    register: ec2_instances
   # - name: create ec2 instance
   #   amazon.aws.ec2_instance:
   #     name: "{{ item }}"
@@ -20,14 +28,6 @@
   #     image_id: "{{ ami_id }}"
   #   loop: "{{ instances }}"
   #   register: ec2_instances
-  - name: create ec2 instance
-    amazon.aws.ec2_instance:
-      name: "{{ item }}"
-      vpc_subnet_id: "{{ subnet_id }}"
-      instance_type: "t3.micro"
-      security group: "{{ sg_id }}"
-      image_id: "{{ ami_id }}"
-    loop: "{{ instances }}"
-    register: ec2_instances
+
 
 
